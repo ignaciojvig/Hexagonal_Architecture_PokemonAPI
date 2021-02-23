@@ -1,21 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using PokemonAPI.Application.Configurations;
-using PokemonAPI.Infra.Data.Context;
+using PokemonAPI.CrossCutting.IoC;
 using PokemonAPI.Infra.Data.Interfaces;
 using PokemonAPI.Infra.Data.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AuditingEntities.Application
 {
@@ -35,12 +27,12 @@ namespace AuditingEntities.Application
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AuditingEntities.Application", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "PokemonAPI", Version = "v1" });
             });
 
-            services.AddScoped<IPokemonRepository, PokemonRepository>();
-
             services.AddDatabaseConfiguration(Configuration);
+
+            services.RegisterServices();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

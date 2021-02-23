@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PokemonAPI.CrossCutting.IoC\PokemonAPI.CrossCutting.IoC.csproj" />
     <ProjectReference Include="..\PokemonAPI.Infra.Data\PokemonAPI.Infra.Data.csproj" />
   </ItemGroup>
 
