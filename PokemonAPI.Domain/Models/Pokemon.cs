@@ -13,5 +13,18 @@ namespace AuditingEntities.Domain.Models
         public PokemonType PokemonType { get; private set; }
 
         public ICollection<Catches> Catches { get; set; }
+
+        public Pokemon(string name, PokemonType pokemonType)
+        {
+            Name = name;
+            PokemonType = pokemonType;
+        }
+
+        public Pokemon(Guid id, string name, PokemonType pokemonType)
+        {
+            Id = id;
+            Name = name;
+            PokemonType = pokemonType;
+        }
     }
 }

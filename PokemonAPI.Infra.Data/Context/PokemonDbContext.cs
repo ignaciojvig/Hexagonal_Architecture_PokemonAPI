@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using PokemonAPI.Domain.Models;
 using PokemonAPI.Infra.Data.Mappings;
+using PokemonAPI.Infra.Data.Seeding;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +40,8 @@ namespace PokemonAPI.Infra.Data.Context
             }
 
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplySeeding();
         }
 
         public async Task<bool> Commit()

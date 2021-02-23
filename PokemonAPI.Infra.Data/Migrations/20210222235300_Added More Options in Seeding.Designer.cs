@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PokemonAPI.Infra.Data.Context;
 
 namespace PokemonAPI.Infra.Data.Migrations
 {
     [DbContext(typeof(PokemonDbContext))]
-    partial class PokemonDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210222235300_Added More Options in Seeding")]
+    partial class AddedMoreOptionsinSeeding
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,7 +48,7 @@ namespace PokemonAPI.Infra.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("46bcfb9b-7e9c-4a22-baeb-048262bba83a"),
+                            Id = new Guid("827e1166-3cd5-40b4-a307-c048d34be010"),
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Bulbasaur",
                             PokemonType = 11,
@@ -54,7 +56,7 @@ namespace PokemonAPI.Infra.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c90b614c-e10f-423a-9bcb-8b8cececacd7"),
+                            Id = new Guid("03a90f76-3bc6-4674-a3fc-837aeebce09b"),
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Charmander",
                             PokemonType = 9,
@@ -62,7 +64,7 @@ namespace PokemonAPI.Infra.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a1ebe66a-d83f-4b69-ae5d-a6a8a997fdd1"),
+                            Id = new Guid("3b02d81d-efbe-43cb-a2ba-1fb0afa83537"),
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Squirtle",
                             PokemonType = 10,
@@ -98,7 +100,7 @@ namespace PokemonAPI.Infra.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("48946519-ded7-4752-92f8-67b133644631"),
+                            Id = new Guid("dd89ec31-7534-44f1-9805-58b2f4ca9451"),
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Ash Ketchum",
                             TrainerClass = 1,
@@ -106,7 +108,7 @@ namespace PokemonAPI.Infra.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8e7a6390-d2a2-437a-8cbf-a4d17f457abe"),
+                            Id = new Guid("9f2d44e1-2748-47c0-a69f-864f92bbabdd"),
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Red",
                             TrainerClass = 3,

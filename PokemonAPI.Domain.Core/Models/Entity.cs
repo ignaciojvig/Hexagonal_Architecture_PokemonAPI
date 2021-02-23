@@ -6,7 +6,7 @@ namespace AuditingEntities.Domain.Core.Models
 {
     public abstract class Entity : AuditingProperties
     {
-        public Guid Id { get; private set; }
+        public Guid Id { get; protected set; }
         public DateTime CreatedAt { get; private set; }
         public DateTime UpdatedAt { get; private set; }
 
